@@ -6,26 +6,30 @@
  * @Description: 
 -->
 
-# Ëã·¨·ÂÕæµÄ°²×°Èí¼ş
+# ç®—æ³•ä»¿çœŸçš„å®‰è£…è½¯ä»¶
 
-## carsim°²×°½Ì³ÌÍøÖ·
+## carsimå®‰è£…æ•™ç¨‹ç½‘å€
 
-### [CarSim½Ì³Ì£¨Ò»£©- »ù±¾²Ù×÷-CSDN²©¿Í](https://blog.csdn.net/YOURUOLI/article/details/127245122)
+### [CarSimæ•™ç¨‹ï¼ˆä¸€ï¼‰- åŸºæœ¬æ“ä½œ-CSDNåšå®¢](https://blog.csdn.net/YOURUOLI/article/details/127245122)
 
-## carsimºÍmatlapÁªºÏ·ÂÕæÅäÖÃ
+## carsimå’Œmatlapè”åˆä»¿çœŸé…ç½®
 
-### [carsim2020.0°²×°½Ì³Ì£¬²¢Óëmatlab 2021b¹ØÁª_casim2020-CSDN²©¿Í](https://blog.csdn.net/Cynthia_2019/article/details/121953106)
+### [carsim2020.0å®‰è£…æ•™ç¨‹ï¼Œå¹¶ä¸matlab 2021bå…³è”_casim2020-CSDNåšå®¢](https://blog.csdn.net/Cynthia_2019/article/details/121953106)
 
-## AMEsim°²×°½Ì³ÌÍøÖ·
+## AMEsimå®‰è£…æ•™ç¨‹ç½‘å€
 
-### [¡¾ AMEsimµÄ°²×°½Ì³Ì¡¿_amesim2021°²×°½Ì³Ì-CSDN²©](https://blog.csdn.net/weixin_48767862/article/details/132314955)
+### [ã€ AMEsimçš„å®‰è£…æ•™ç¨‹ã€‘_amesim2021å®‰è£…æ•™ç¨‹-CSDNåš](https://blog.csdn.net/weixin_48767862/article/details/132314955)
 
-## AMEsimºÍmatlapÁªºÏ·ÂÕæÅäÖÃ
+## AMEsimå’Œmatlapè”åˆä»¿çœŸé…ç½®
 
-### [Amesim2021ÓëMatlabÁªºÏ·ÂÕæ»·¾³ÅäÖÃ½Ì³Ì - ßÙÁ¨ßÙÁ¨ (bilibili.com)](https://www.bilibili.com/opus/785158539209343001)
+### [Amesim2021ä¸Matlabè”åˆä»¿çœŸç¯å¢ƒé…ç½®æ•™ç¨‹ - å“”å“©å“”å“© (bilibili.com)](https://www.bilibili.com/opus/785158539209343001)
 
-## Í¼´²
+## å›¾åºŠ
 
-### [Ê¹ÓÃ½Ì³Ì][Vscode + Github + Picgo Ãâ·ÑÅäÖÃmarkdownÍ¼´²¹¥ÂÔ - Öªºõ (zhihu.com)](https://zhuanlan.zhihu.com/p/532669042)
-½ØÍ¼¼ôÇĞµ½¼ôÌù°å£¬°´×¡ctrl+alt+u¾ÍÉÏ´«µ½GitHubÉÏ¡£
+### [ä½¿ç”¨æ•™ç¨‹][Vscode + Github + Picgo å…è´¹é…ç½®markdownå›¾åºŠæ”»ç•¥ - çŸ¥ä¹ (zhihu.com)](https://zhuanlan.zhihu.com/p/532669042)
+æˆªå›¾å‰ªåˆ‡åˆ°å‰ªè´´æ¿ï¼ŒæŒ‰ä½ctrl+alt+uå°±ä¸Šä¼ åˆ°GitHubä¸Šã€‚
 ![20241119141106](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241119141106.png)
+
+è§£å†³å…‹éš†é‡æ–°ä¸Šä¼ é¡¹ç›®åˆ°ä»“åº“çš„åŠæ³•ã€‚
+git remote set-url origin git@github.com:xiongGithub1/myAutosarNote.git
+git push -u origin main
