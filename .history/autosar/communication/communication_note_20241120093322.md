@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiongGithub1&&qx20001119@163.com
- * @LastEditTime: 2024-11-20 09:37:23
+ * @LastEditTime: 2024-11-20 09:33:22
  * @Description: 
 -->
 
@@ -189,7 +189,7 @@ Rte调用Com_ReceiveSignal有两种方式:
 **信号网关**:
 比如COM接收到CAN1的一帧报文，提取其中的网关信号，将该信号赋值到CAN2的指定信号，并通过CAN2发送出去，起到信号网关的作用。(**signal通过信号网关发出去了Rte也是能够读取的**)
 ![20241120091100](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120091100.png)
-### 信号发送接收数据流
+#### 信号发送接收数据流
 1. COM和PduR接口
 ![20241120092335](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120092335.png)
 ![1732065879167](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/1732065879167.png)
@@ -199,12 +199,3 @@ Rte调用Com_ReceiveSignal有两种方式:
 3. Rte、Com、PduR 三个模块接收通知时序图
 ![20241120093200](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093200.png)
 ![20241120093315](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093315.png)
-
-### 总结
-当COM模块是utoSAR通信中非常重要的模块，核心是实现了基于信号的接口，使得应用层可以面向信号开发。
-COM 内部还实现了很多功能，比如:
-- 字节序转换
-- 超时监控(报文超时监控)
-- 非法值处理等
- 
-更细的功能大家需要指代码来理解，基本上大家要对Com模块的基本功能有定的了解。

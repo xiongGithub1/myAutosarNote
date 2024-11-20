@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiongGithub1&&qx20001119@163.com
- * @LastEditTime: 2024-11-20 09:37:23
+ * @LastEditTime: 2024-11-20 09:00:14
  * @Description: 
 -->
 
@@ -171,40 +171,3 @@ I-PDU(报文)传输模式：
 
 **信号的接收**:
 ![20241120090037](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120090037.png)
-  - PduR 调用Com RxIndication 将I-PDU传给 Com
-  - Com将Pdu转换成信号
-  - Rte 通过 Com 提供的 Com_ReceiveSignal来接收信号
-Rte调用Com_ReceiveSignal有两种方式:
-  - 在Com 接收到信号的时候，通过调用Rte回调函数的方式。该种方式该信号值肯定是最新更新的信号值
-  - Rte层周期性调用ComReceiveSignal，不管此时该信号是否更新，可能会读到信号的旧值。这种方式也是可取的，将周期设置成5ms，是完全满足要求的。
-**信号组的概念**：
-信号组就是好几条同一条报文组成一个组，Rte通过调用以下函数时：
-
-     - Com ReceiveSignalGroup
-     - Com SendSignalGroup
-
-实现发送信号组和接收信号组的效果。
-实际上信号组就是提供了一个影子缓存区，将多个信号同步更新到I-PDU，起到一起发送或者接收的效果。
-
-**信号网关**:
-比如COM接收到CAN1的一帧报文，提取其中的网关信号，将该信号赋值到CAN2的指定信号，并通过CAN2发送出去，起到信号网关的作用。(**signal通过信号网关发出去了Rte也是能够读取的**)
-![20241120091100](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120091100.png)
-### 信号发送接收数据流
-1. COM和PduR接口
-![20241120092335](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120092335.png)
-![1732065879167](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/1732065879167.png)
-**Lin模块有一个触发发送**
-2. Rte、Com、PduR 三个模块发送确认时序图
-![20241120092749](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120092749.png)
-3. Rte、Com、PduR 三个模块接收通知时序图
-![20241120093200](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093200.png)
-![20241120093315](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093315.png)
-
-### 总结
-当COM模块是utoSAR通信中非常重要的模块，核心是实现了基于信号的接口，使得应用层可以面向信号开发。
-COM 内部还实现了很多功能，比如:
-- 字节序转换
-- 超时监控(报文超时监控)
-- 非法值处理等
- 
-更细的功能大家需要指代码来理解，基本上大家要对Com模块的基本功能有定的了解。

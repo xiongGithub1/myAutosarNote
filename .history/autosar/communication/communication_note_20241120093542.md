@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiongGithub1&&qx20001119@163.com
- * @LastEditTime: 2024-11-20 09:37:23
+ * @LastEditTime: 2024-11-20 09:35:42
  * @Description: 
 -->
 
@@ -200,11 +200,9 @@ Rte调用Com_ReceiveSignal有两种方式:
 ![20241120093200](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093200.png)
 ![20241120093315](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241120093315.png)
 
-### 总结
+#### 总结
 当COM模块是utoSAR通信中非常重要的模块，核心是实现了基于信号的接口，使得应用层可以面向信号开发。
 COM 内部还实现了很多功能，比如:
 - 字节序转换
-- 超时监控(报文超时监控)
+- 超时监控
 - 非法值处理等
- 
-更细的功能大家需要指代码来理解，基本上大家要对Com模块的基本功能有定的了解。
