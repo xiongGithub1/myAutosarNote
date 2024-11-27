@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-22 08:40:04
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-11-27 17:21:17
+ * @LastEditTime: 2024-11-27 17:14:16
  * @Description: 
 -->
 
@@ -75,9 +75,5 @@ erase
 点击生成工程
 ![20241127171107](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171107.png)
 
-选中函数进行编写代码，操作单个io
-![20241127171857](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171857.png)
-
-操作多个io
-
-![20241127172127](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127172127.png)
+选中函数进行编写代码
+![20241127171412](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171412.png)

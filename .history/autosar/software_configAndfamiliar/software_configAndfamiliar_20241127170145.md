@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-22 08:40:04
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-11-27 17:21:17
+ * @LastEditTime: 2024-11-27 17:01:45
  * @Description: 
 -->
 
@@ -68,16 +68,3 @@ erase
  ![20241127165907](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127165907.png)
 
 ![20241127170129](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127170129.png)
-
-1.中断标志位2.中断触发方式3.io引脚复用4.锁5.推挽使能6.上拉下拉电平7.初始电平8.数字滤波字段
-![20241127170633](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127170633.png)
-
-点击生成工程
-![20241127171107](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171107.png)
-
-选中函数进行编写代码，操作单个io
-![20241127171857](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171857.png)
-
-操作多个io
-
-![20241127172127](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127172127.png)

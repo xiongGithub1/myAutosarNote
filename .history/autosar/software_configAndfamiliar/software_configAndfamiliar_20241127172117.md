@@ -79,5 +79,3 @@ erase
 ![20241127171857](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127171857.png)
 
 ²Ù×÷¶à¸öio
-
-![20241127172127](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241127172127.png)
