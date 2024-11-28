@@ -1,8 +1,8 @@
 <!--
  * @Author: qinXiong
  * @Date: 2024-11-22 08:40:04
- * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-11-28 16:39:14
+ * @LastEditors: Qxiong&&2307975018@qq.com
+ * @LastEditTime: 2024-11-28 16:36:46
  * @Description: 
 -->
 
@@ -218,9 +218,4 @@ can0初始化
 ![20241128160252](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241128160252.png)
 
 ## mcal安装配置 软件下载与安装
-
-**MCAL**
-MCAL是Microcontroler Abstraction Layer的缩写，即微控制器抽象层，位于AUTOSAR构架中的BSW(基础软件)层，是可以直接驱动芯片外设和访问微处理器内寄存器的的底层驱动。由芯片开发商提供，目的是使上层软件与底层硬件分离，来达到开发的标准化与通用化。
-
-![20241128163814](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241128163814.png)
 
