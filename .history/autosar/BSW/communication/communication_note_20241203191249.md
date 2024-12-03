@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-03 19:29:58
+ * @LastEditTime: 2024-12-03 19:12:49
  * @Description: 
 -->
 
@@ -104,7 +104,6 @@ CAN总线有以下几种帧格式:
 ![20241203185445](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203185445.png)
 
 #### 2.can 通信机制和数据帧
-**A.通讯机制** 
 CAN 总线数据链路层实现了如下的CAN 通信机制:
 - 多主的基于优先级的总线访问
 - 非破坏性的基于竞争的仲裁
@@ -138,85 +137,9 @@ C节点ID为1000=011  1110 1000b
 **(屏蔽寄存器里面的是1的才关注只有满足报文缓冲区的值才接收。)**
 
 
-**B.数据帧**
+**数据帧**
 
-![20241203191326](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191326.png)
-SOF：帧起始
 
-- 标识一个数据帧的开始，**用于同步**
-- 一个**显性**位
-- 只有在总线**空闲期间**节点才能够**发送SOF**
-ID:唯一确定一条报文
-- 表明报文的含义，可以包含报文的源地址和目标地址
-- 确定报文的仲裁优先级，ID数值越小，优先级越高
-- 标准帧11位，扩展帧29位
-
-![20241203191633](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191633.png)
-
-RTR:用于区别数据帧和远程帧
-- 数据帧，RTR=0
-- 远程帧，RTR=1
-- 当RTR=1为远程帧的时候，是不需要数据场的，远程帧的作用就是请求其他模块发包。
-
-![20241203191742](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191742.png)
-
-IDE位:用于区别标准帧和扩展帧
-标准帧，IDE=0(11位 ID)
-扩展帧，IDE=1(29位 ID)
-
-![20241203191848](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191848.png)
-
-![20241203191907](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191907.png)
-
-SRR位:只有扩展帧有SRR，表明在该位替代了标准帧中的RTR位
-- 该位无实际意义
-- SRR 永远置1
-
-![20241203191956](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203191956.png)
-
-r0、r1位:
-- 两个保留位
-- 当前置 0
-
-![20241203192127](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192127.png)
-
-DLC 位:
-- 包含4位，表示数据场包含数据的字节数，CAN报文数据场最长为8字节
-- DLC = 0-8
-- DLC =9-15->DLC=8
-
-![20241203192213](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192213.png)
-
-Data Field 数据场:
-- 具有0-8个字节长度，由DLC确定长度
-- 包含CAN 数据帧发送的内容
-![20241203192334](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192334.png)
-
-CRC:
-用于进行 CRC 校验
-
-![20241203192404](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192404.png)
-![20241203192452](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192452.png)
-
-DEL:CRC界定符
-- 界定CRC列固定格式，1个隐形位
-- CRC界定符之前进行位填充
-![20241203192557](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192557.png)
-
-ACK:
-用来确定报文被至少一个节点正确接收**(A发送数据到ack位了之后，开始读总线上的数据，看是否有一个节点接收到，B接收到数据之后拉高总线电平)
-
-![20241203192638](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192638.png)
-
-EOF:
-- 表示数据帧接收
-- 固定格式，7个连续的隐形位
-
-ITM:
-- 固定格式，3个连续的隐形位
-- ITM之后进入总线空闲状态，此时节点可以发送报文
-
-![20241203193043](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203193043.png)
 #### 3.can 错误检测和错误帧
 #### 4.位定时和同步
 #### 5.总结

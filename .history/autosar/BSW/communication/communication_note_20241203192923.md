@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-03 19:29:58
+ * @LastEditTime: 2024-12-03 19:28:29
  * @Description: 
 -->
 
@@ -208,15 +208,7 @@ ACK:
 
 ![20241203192638](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192638.png)
 
-EOF:
-- 表示数据帧接收
-- 固定格式，7个连续的隐形位
 
-ITM:
-- 固定格式，3个连续的隐形位
-- ITM之后进入总线空闲状态，此时节点可以发送报文
-
-![20241203193043](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203193043.png)
 #### 3.can 错误检测和错误帧
 #### 4.位定时和同步
 #### 5.总结

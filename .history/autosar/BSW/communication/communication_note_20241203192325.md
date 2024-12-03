@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-03 19:29:58
+ * @LastEditTime: 2024-12-03 19:23:25
  * @Description: 
 -->
 
@@ -190,33 +190,8 @@ DLC 位:
 Data Field 数据场:
 - 具有0-8个字节长度，由DLC确定长度
 - 包含CAN 数据帧发送的内容
-![20241203192334](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192334.png)
+  
 
-CRC:
-用于进行 CRC 校验
-
-![20241203192404](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192404.png)
-![20241203192452](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192452.png)
-
-DEL:CRC界定符
-- 界定CRC列固定格式，1个隐形位
-- CRC界定符之前进行位填充
-![20241203192557](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192557.png)
-
-ACK:
-用来确定报文被至少一个节点正确接收**(A发送数据到ack位了之后，开始读总线上的数据，看是否有一个节点接收到，B接收到数据之后拉高总线电平)
-
-![20241203192638](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203192638.png)
-
-EOF:
-- 表示数据帧接收
-- 固定格式，7个连续的隐形位
-
-ITM:
-- 固定格式，3个连续的隐形位
-- ITM之后进入总线空闲状态，此时节点可以发送报文
-
-![20241203193043](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241203193043.png)
 #### 3.can 错误检测和错误帧
 #### 4.位定时和同步
 #### 5.总结
