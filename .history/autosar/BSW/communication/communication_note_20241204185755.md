@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-04 19:20:42
+ * @LastEditTime: 2024-12-04 18:57:55
  * @Description: 
 -->
 
@@ -288,21 +288,6 @@ ITM:
 错误帧格式:
 1.包括错误标志和错误界定符
 2.错误标志:主动错误6个显性位 被动错误6个隐性位
-
-主动错误帧发送:
-
-- 位错误、填充错误、格式错误或者 ACK 错误产生后->错误标志在下一位发
-送
-- CRC 错误->错误标志在 ACK 界定符后发送
-- 错误帧发送后:总线空闲时重发出错的数据帧
-
-![20241204185950](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204185950.png)
-
-![20241204191701](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204191701.png)
-**(发送节点和接收节点一起往总线上发送错误标志)**
-
-![20241204191911](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204191911.png)
-
 #### 4.位定时和同步
 
 #### 5.总结

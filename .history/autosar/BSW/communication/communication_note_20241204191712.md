@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-04 19:20:42
+ * @LastEditTime: 2024-12-04 19:17:12
  * @Description: 
 -->
 
@@ -299,9 +299,7 @@ ITM:
 ![20241204185950](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204185950.png)
 
 ![20241204191701](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204191701.png)
-**(发送节点和接收节点一起往总线上发送错误标志)**
 
-![20241204191911](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241204191911.png)
 
 #### 4.位定时和同步
 
