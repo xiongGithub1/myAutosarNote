@@ -386,7 +386,7 @@ CAN ×ÜÏß×÷Îª³µÔØÍ¨ÐÅ×îÖØÒªµÄ×ÜÏß,ÓëÆäºÜºÃ¿¹¸ÉÈÅÐÔ¡¢´íÎó¼ì²â»úÖÆ¡¢²»ÐèÒªÊ±ÖÓÏßµÈ»
 5.½øÈëCOM²ãÖ®ºó£¬¸ù¾ÝSWCsµÄÇé¿ö£¬ÒªÃ´Ö±½ÓÍ¨¹ýRTE°ÑÐÅºÅ¸øµ½SWCs£¬ÒªÃ´»º´æµ½×Ô¼ºµÄBuffer¡£
 **×¢Òâ:ÕâÀïÒ²Éæ¼°µ½PDUµÄbuffer»º´æÎÊÌâ£¬Ò»°ãÇé¿ö´ÓÇý¶¯ÉÏÀ´Ò²²»»áÓÐBuffer¿½±´£¬Ö»ÓÐµ½COM²ã²Å»áÓÐ×Ô¼ºµÄBuffer£¬ÕâÑù¿ÉÒÔÌá¸ß´«ÊäÐ§ÂÊ£¬½ÚÊ¡RAM×ÊÔ´¡£**
 ### 4.×Ü½á
-ÕâÒ»ÕÂ°ÑAutosarÍ¨ÐÅ·þÎñµÄ¸ÅÊö½²ÁËÒ»±é£¬´ó¼ÒÒª¶ÔPDU¡¢Êý¾ÝÊÕ·¢Á´Â·ÓÐÒ»¶¨µÄÁË½â£¬Õï¶Ï·þÎñ·Åµ½Õï¶ÏÕÂ½ÚÃèÊö¡£ÕâÀïºÜ¶àÃ»ÓÐÆÌ¿ª½²½â£¬ºóÐø»áÔÚÃ¿Ò»¸ö¾ßÌåÄ£¿éÖÐÏêÏ¸ÃèÊö¡£
+
 ## spiÄ£¿é
 
 ### 1.spi ¸ÅÊö

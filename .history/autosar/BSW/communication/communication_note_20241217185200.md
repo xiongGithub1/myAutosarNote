@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-17 19:20:05
+ * @LastEditTime: 2024-12-17 18:52:00
  * @Description: 
 -->
 
@@ -349,44 +349,11 @@ CAN ×ÜÏß×÷Îª³µÔØÍ¨ÐÅ×îÖØÒªµÄ×ÜÏß,ÓëÆäºÜºÃ¿¹¸ÉÈÅÐÔ¡¢´íÎó¼ì²â»úÖÆ¡¢²»ÐèÒªÊ±ÖÓÏßµÈ»
 
 ## autosarÍ¨ÐÅ·þÎñ¼Ü¹¹
 ### 1.AutoSARÍ¨ÐÅ·þÎñ¼Ü¹¹
-![20241217185206](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217185206.png)
 
-ÎÒÃÇÔÚÖ®Ç°½²ÁËBSW»ù´¡Èí¼þ²ãµÄ»ù±¾·þÎñ£¬ÕâÕÂÕë¶ÔÍ¨ÐÅºÍÕï¶Ï·þÎñÎÒÃÇ¾ßÌå½²Ò»ÏÂ(±¾½²Ö÷ÒªÕë¶ÔÍ¨ÐÅ·þÎñ£¬Õï¶Ï·þÎñ·Åµ½×¨ÃÅµÄÕÂ½ÚÃèÊö)¡£´ÓÍ¼ÖÐ¿ÉÒÔ¿´³ö£¬AutoSARÖÐµÄÍ¨ÐÅ·þÎñ·Ö²ã»¹ÊÇ·Ç³£ÇåÎúµÄ:
-- **Mcal**°üº¬ÁËÊÕ·¢Æ÷Çý¶¯ºÍ×ÜÏß¿ØÖÆÆ÷Çý¶¯£¬McalÏòÉÏÌá¹©Çý¶¯½Ó¿Ú¹©×ÜÏß½Ó¿Ú²ã(CanIf LinIf EthIf)µ÷ÓÃ¡£
-- **×ÜÏß½Ó¿Ú²ã**(CanIf LinIf EthIf)Ò²¾ÍÊÇÍ¨ÐÅÓ²¼þ³éÏó²ã£¬Ö÷ÒªÈÎÎñ°üÀ¨ÏòÉÏ²ãÄ£¿éÌá¹©ÓëÓ²¼þÎÞ¹ØµÄÍ³Ò»½Ó¿Ú£¬ÆÁ±ÎÏÂ²ã¿ØÖÆÆ÷ÊÕ·¢Æ÷ÊµÏÖÏ¸½Ú¡£
-- **Bus Tp²ã**:Tp(Transport Layer)ÊÇÍ¨ÐÅ´«Êä²ã£¬Ö÷ÒªÊÇÎªÕï¶ÏÊ¹ÓÃµÄ£¬µ±can Lin×ÜÏßÐèÒª´«Êä´óÓÚ8byte Êý¾Ý£¬¾ÍÐèÒªTp²ã½øÐÐ¶àÖ¡´«Êä¡£
-- **PduR²ã**£ºPdu RouterÒ²¾ÍÊÇPduÂ·ÓÉ²ã£¬ËùÓÐµÄÍ¨ÐÅÊÕ·¢¶¼»áµ½ÕâÒ»²ã½øÐÐPDUÂ·ÓÉ¡£AutosarÖÐ°üº¬ÁËCan¡¢Lin¡¢EthµÈÍ¨ÐÅ£¬Ã¿¸öÍ¨ÐÅ±¨ÎÄ¶¼¿ÉÒÔÃèÊö³ÉÒ»¸ö PDU(protocal data unit)Ð­ÒéÊý¾Ýµ¥Ôª£¬Í¨¹ý PduR ÕâÒ»²ãÍ³Ò»¹ÜÀíÃ¿¸ö Pdu ÊÕ·¢È¥´¦¡£
-- **IPDU MuX**:IPDU¶àÂ·¸´ÓÃ¹¦ÄÜ£¬Ö¸µÄÊÇÊ¹ÓÃÍ¬Ò»¸öI-PDUµÄÍ¬Ò»ÖÖPCI£¬ÆäSDUÓÐ¶à¸ö²»Í¬µÄ²¼¾Ö¡£ºóÐø»áÔÚPduRÄ£¿éÏêÏ¸ÃèÊö¡£
-- **COM**:Í¨ÐÅ±¨ÎÄ»áµ½ÕâÀï¡£**´ÓPDUR½ÓÊÕÉÏÀ´µÄI-PDUµ½ÕâÀï»á×ª³É¾ßÌåÐÅºÅÊý¾Ý¸øµ½Ó¦ÓÃ²ãÊ¹ÓÃ**£¬Ó¦ÓÃ²ãÍ¨¹ý RTE´«ÏÂÀ´µÄÐÅºÅÊ×ÏÈµ½ÕâÀï×ª³É I-PDU·¢µ½ PduR¡£Ó¦ÓÃ²ãÎÞÐè¹Ø×¢ÊÕ·¢Êý¾ÝÊÇÍ¨¹ýÊ²Ã´×ÜÏß´«ÊäµÄ£¬ÕâÐ©ÊÕ·¢µÄÊý¾ÝÍ¨¹ý DBCÎÄ¼þ»òÕßARXML,ÎÄ¼þÊÂÏÈ¶¨ÒåºÃ¡£COMÖ÷ÒªÆðµ½ÐÅºÅ½Ó¿ÚºÍÍø¹Ø×÷ÓÃ¡£ºóÐø»áÔÚ COM Ä£¿éÏêÏ¸ÃèÊö¡£
-- **DCM**:Õï¶Ï±¨ÎÄ»áµ½ÕâÀï£¬¸ù¾ÝÕï¶ÏÒªÇó×ö¾ßÌåÕï¶Ï·þÎñ¡£ºóÐøÕï¶ÏÏêÏ¸
-½²½â¡£
 ### 2.Ð­ÒéÊý¾Ýµ¥ÔªPDU
-![20241217190446](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217190446.png)
-
-Õâ¸öÍ¼ÊÇ AutoSAR ¹Ù·½ÎÄµµÖÐ½ØÈ¡£¬Õâ¸öÍ¼°Ñ Autosar µÄÍ¨ÐÅ·þÎñºÜÏ¸ÖÂµÄÃæÃèÊö³öÀ´ÁË¡£°üÀ¨Eth¡¢FlexRay¡¢CAN¡¢LIN 4ÖÖ×ÜÏßÍ¨ÐÅÐ­ÒéÕ»¡£**L-PDU**:Data Link Layer PDU Êý¾ÝÁ´Â·²ã PDU£¬¿ÉÒÔÀí½â¾ÍÊÇÒ»Ö¡×ÜÏß±¨ÎÄ **N-PDU**:NetworkLayerPDUÍøÂç²ã(Ò²¾ÍÊÇ´«ÊäTP²ã)PDU£¬Ò»°ãÕï¶Ï±¨ÎÄ»á×ßTP²ã£¬Í¨ÐÅ±¨ÎÄÖ±½Ó´Ó IF²ã×ªµ½PduR²ã£¬µ±Õï¶ÏÊÇ¶àÖ¡´«ÊäµÄÊ±ºò£¬Ò»¸öI-PDU¾Í»á±»·Ö¶Î³É¶à¸öN-PDU
-**I-PDU**:Interaction Layer PDU½»»¥²ãPDU£¬PDURÂ·ÓÉ×ª·¢I-PDU¡£ÈýÖÖPDU´ú±íÔÚÍ¨ÐÅÐ­ÒéÕ»²»Í¬·Ö²ãµÄÐ­ÒéÊý¾Ýµ¥Ôª£¬I-PDU¾Í°üº¬ÁËÊý¾Ýbuffer Ö¸Õë¡¢Êý¾Ý³¤¶È¡¢ºÍ I-PDU ID£¬±¾ÖÊ¾ÍÊÇÒ»¸ö½á¹¹Ìå¡£
 ### 3.Í¨ÐÅ·þÎñ´«ÊäÊý¾ÝÁ÷
-**·¢ËÍÁ÷³Ì**£º
-![20241217191413](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217191413.png)
-
-1.Ó¦ÓÃ²ãÄ£¿éÍ¨¹ýRETµ÷ÓÃC0MÄ£¿éComSendSignalÇëÇó·¢ËÍÐÅºÅ(Id,Value)
-2.COMÐ´ÐÅºÅ½øPDUbuffer
-3.PDU±»ÊÂÏÈ¶¨ÒåºÃµÄPDUÂ·ÓÉ±í£¬·¢ËÍµ½Ö¸¶¨Ä¿µÄ²ã(¸ù¾ÝPDU IDÀ´²éÕÒPDUµÄÂ·ÓÉ±í)£¬±ÈÈçCAN×ÜÏßµÄPDU¾Í»áÂ·ÓÉµ½CanIf²ã£¬LinµÄPDU¾Í»áÂ·ÓÉµ½LinIf ²ã¡£
-4.Interface ²ã¸ù¾Ý²»Í¬µÄÍ¨µÀ£¬°Ñ±¨ÎÄÐ´Èëµ½²»Í¬¶ÓÁÐÖÐ
-5.Driver¸ù¾Ý±¨ÎÄÓÅÏÈ¼¶·¢ËÍ±¨ÎÄ
-**×¢Òâ:ÕâÀïÉæ¼°µ½PDUµÄbuffer»º´æÎÊÌâ£¬Ò»°ãÇé¿öÏÂÉÏ²ãµ½If²ã¶¼²»»áÓÐ PDU¿½±´¹ý³Ì£¬Ö±½Ó°Ñ Buffer »º´æÖ¸Õë½øÐÐ´«µÝ¡£µ½ÁËÇý¶¯²ã¿ÉÄÜ»á¿½±´½øÈëÇý¶¯buffer½øÐÐ·¢ËÍ¡£ÕâÑù¿ÉÒÔÌá¸ß´«ÊäÐ§ÂÊ£¬½ÚÊ¡RAM×ÊÔ´¡£**
-
-**½ÓÊÕÁ÷³Ì**£º
-![20241217191814](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217191814.png)
-
-1.Çý¶¯Í¨¹ýÂÖÑ¯»òÕßÖÕ¶Ë½ÓÊÕ±¨ÎÄ
-2.Çý¶¯µ÷ÓÃIF²ãµÄRxIndication½«Êý¾Ý´«µÝ¸øInterface²ã
-3.Interface µ÷ÓÃ PduR ²ãµÄ **RxIndication ½«Êý¾Ý´«µÝ¸ø PduR²ã**
-4.PduR²ã¸ù¾ÝPDU IDÕÒµ½Â·ÓÉ±í£¬Â·ÓÉµ½Ö¸¶¨ÉÏ²ã£¬Í¨ÐÅ±¨ÎÄÒ»°ã¶¼Â·ÓÉµ½COM²ã¡£
-5.½øÈëCOM²ãÖ®ºó£¬¸ù¾ÝSWCsµÄÇé¿ö£¬ÒªÃ´Ö±½ÓÍ¨¹ýRTE°ÑÐÅºÅ¸øµ½SWCs£¬ÒªÃ´»º´æµ½×Ô¼ºµÄBuffer¡£
-**×¢Òâ:ÕâÀïÒ²Éæ¼°µ½PDUµÄbuffer»º´æÎÊÌâ£¬Ò»°ãÇé¿ö´ÓÇý¶¯ÉÏÀ´Ò²²»»áÓÐBuffer¿½±´£¬Ö»ÓÐµ½COM²ã²Å»áÓÐ×Ô¼ºµÄBuffer£¬ÕâÑù¿ÉÒÔÌá¸ß´«ÊäÐ§ÂÊ£¬½ÚÊ¡RAM×ÊÔ´¡£**
 ### 4.×Ü½á
-ÕâÒ»ÕÂ°ÑAutosarÍ¨ÐÅ·þÎñµÄ¸ÅÊö½²ÁËÒ»±é£¬´ó¼ÒÒª¶ÔPDU¡¢Êý¾ÝÊÕ·¢Á´Â·ÓÐÒ»¶¨µÄÁË½â£¬Õï¶Ï·þÎñ·Åµ½Õï¶ÏÕÂ½ÚÃèÊö¡£ÕâÀïºÜ¶àÃ»ÓÐÆÌ¿ª½²½â£¬ºóÐø»áÔÚÃ¿Ò»¸ö¾ßÌåÄ£¿éÖÐÏêÏ¸ÃèÊö¡£
+
 ## spiÄ£¿é
 
 ### 1.spi ¸ÅÊö

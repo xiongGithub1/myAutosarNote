@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-17 19:20:05
+ * @LastEditTime: 2024-12-17 18:23:41
  * @Description: 
 -->
 
@@ -320,73 +320,8 @@ ITM:
 quantum
 **相位缓冲段1PES1(PHASESEG1)**:用于补偿节点间的晶振误差，允许通过***重同步**对该段加长，在这个时间段末端进行总线状态的采样(1-8tq)
 **相位缓冲段 2PES2(PHASE SEG2)**:用于补偿节点间的晶振误差，允许通过**重同步**对该段缩短(1-8tq)
-
-**二、同步**
-can 的同步包括**硬同步**和**重同步**两种方式
-同步规则:
-- 一个位时间内只允许一种同步方式
-- 任何一个“隐性“到“显性”的跳变都可用于同步
-- **“硬同步”**发生在SOF，所有接收节点调整各自当前位的同步段，使其位于发送的 SOF 位内。只有在帧起始信号SOF时有用，无法确保后续位时序是否同步。
-- “重同步“发生在一个帧的其他位场内，当跳变沿落在同步段之外。
-- 在 SOF 到仲裁场有多个节点同时发送的情况下，”发送节点对跳变沿不进行重同步。
-**硬同步:**
-也就是一帧CAN报文开始的SOF位的时候，总线上接收节点会进行一次硬同步，让所有接收节点调整各自当前位的同步段，调整的宽度有限。一帧数据后面位置产生相位偏移的时候，就需要使用重同步来重新同步，某节点检测到总线的帧起始信号不在节点内部时序的SS段范围，会判断自己内部时序和总线不同步，该节点通过硬同步方式重新调整，把自己的SS段移到总线下降沿的部分，从而获得同步。
-![20241217183109](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217183109.png)
-**重同步**
-当跳变沿和同步段误差小于 SJW(reSynchronization Jump Width;重新同步补偿宽度)，重新同步会通过延长 PTS1段或者缩短PTS2 段，来保证采样点位置的正确;如限定 SJW=5 Tq 时，单词同步调整的时候不能增加或者减少超过 5Tq 的时间长度，若有需要，控制器会通过多次小幅度调整来实现同步)
-![20241217183446](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217183446.png)
-
-位定时:
-传播段延时时间确定
-![20241217183643](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217183643.png)
-
-位定时参数确定:
-![20241217183720](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217183720.png)
-
-**总 结**
-CAN 总线作为车载通信最重要的总线,与其很好抗干扰性、错误检测机制、不需要时钟线等机制都密切相关。学好 CAN 总线不仅仅要学好CAN 的网络协议栈，对其底层通讯技术最好也要有所理解，这样才能明白CAN 总线的本质。
 #### 5.总结
 
-## autosar通信服务架构
-### 1.AutoSAR通信服务架构
-![20241217185206](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217185206.png)
-
-我们在之前讲了BSW基础软件层的基本服务，这章针对通信和诊断服务我们具体讲一下(本讲主要针对通信服务，诊断服务放到专门的章节描述)。从图中可以看出，AutoSAR中的通信服务分层还是非常清晰的:
-- **Mcal**包含了收发器驱动和总线控制器驱动，Mcal向上提供驱动接口供总线接口层(CanIf LinIf EthIf)调用。
-- **总线接口层**(CanIf LinIf EthIf)也就是通信硬件抽象层，主要任务包括向上层模块提供与硬件无关的统一接口，屏蔽下层控制器收发器实现细节。
-- **Bus Tp层**:Tp(Transport Layer)是通信传输层，主要是为诊断使用的，当can Lin总线需要传输大于8byte 数据，就需要Tp层进行多帧传输。
-- **PduR层**：Pdu Router也就是Pdu路由层，所有的通信收发都会到这一层进行PDU路由。Autosar中包含了Can、Lin、Eth等通信，每个通信报文都可以描述成一个 PDU(protocal data unit)协议数据单元，通过 PduR 这一层统一管理每个 Pdu 收发去处。
-- **IPDU MuX**:IPDU多路复用功能，指的是使用同一个I-PDU的同一种PCI，其SDU有多个不同的布局。后续会在PduR模块详细描述。
-- **COM**:通信报文会到这里。**从PDUR接收上来的I-PDU到这里会转成具体信号数据给到应用层使用**，应用层通过 RTE传下来的信号首先到这里转成 I-PDU发到 PduR。应用层无需关注收发数据是通过什么总线传输的，这些收发的数据通过 DBC文件或者ARXML,文件事先定义好。COM主要起到信号接口和网关作用。后续会在 COM 模块详细描述。
-- **DCM**:诊断报文会到这里，根据诊断要求做具体诊断服务。后续诊断详细
-讲解。
-### 2.协议数据单元PDU
-![20241217190446](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217190446.png)
-
-这个图是 AutoSAR 官方文档中截取，这个图把 Autosar 的通信服务很细致的面描述出来了。包括Eth、FlexRay、CAN、LIN 4种总线通信协议栈。**L-PDU**:Data Link Layer PDU 数据链路层 PDU，可以理解就是一帧总线报文 **N-PDU**:NetworkLayerPDU网络层(也就是传输TP层)PDU，一般诊断报文会走TP层，通信报文直接从 IF层转到PduR层，当诊断是多帧传输的时候，一个I-PDU就会被分段成多个N-PDU
-**I-PDU**:Interaction Layer PDU交互层PDU，PDUR路由转发I-PDU。三种PDU代表在通信协议栈不同分层的协议数据单元，I-PDU就包含了数据buffer 指针、数据长度、和 I-PDU ID，本质就是一个结构体。
-### 3.通信服务传输数据流
-**发送流程**：
-![20241217191413](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217191413.png)
-
-1.应用层模块通过RET调用C0M模块ComSendSignal请求发送信号(Id,Value)
-2.COM写信号进PDUbuffer
-3.PDU被事先定义好的PDU路由表，发送到指定目的层(根据PDU ID来查找PDU的路由表)，比如CAN总线的PDU就会路由到CanIf层，Lin的PDU就会路由到LinIf 层。
-4.Interface 层根据不同的通道，把报文写入到不同队列中
-5.Driver根据报文优先级发送报文
-**注意:这里涉及到PDU的buffer缓存问题，一般情况下上层到If层都不会有 PDU拷贝过程，直接把 Buffer 缓存指针进行传递。到了驱动层可能会拷贝进入驱动buffer进行发送。这样可以提高传输效率，节省RAM资源。**
-
-**接收流程**：
-![20241217191814](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217191814.png)
-
-1.驱动通过轮询或者终端接收报文
-2.驱动调用IF层的RxIndication将数据传递给Interface层
-3.Interface 调用 PduR 层的 **RxIndication 将数据传递给 PduR层**
-4.PduR层根据PDU ID找到路由表，路由到指定上层，通信报文一般都路由到COM层。
-5.进入COM层之后，根据SWCs的情况，要么直接通过RTE把信号给到SWCs，要么缓存到自己的Buffer。
-**注意:这里也涉及到PDU的buffer缓存问题，一般情况从驱动上来也不会有Buffer拷贝，只有到COM层才会有自己的Buffer，这样可以提高传输效率，节省RAM资源。**
-### 4.总结
-这一章把Autosar通信服务的概述讲了一遍，大家要对PDU、数据收发链路有一定的了解，诊断服务放到诊断章节描述。这里很多没有铺开讲解，后续会在每一个具体模块中详细描述。
 ## spi模块
 
 ### 1.spi 概述

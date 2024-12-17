@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-17 19:20:05
+ * @LastEditTime: 2024-12-17 19:16:53
  * @Description: 
 -->
 
@@ -377,16 +377,9 @@ CAN ×ÜÏß×÷Îª³µÔØÍ¨ÐÅ×îÖØÒªµÄ×ÜÏß,ÓëÆäºÜºÃ¿¹¸ÉÈÅÐÔ¡¢´íÎó¼ì²â»úÖÆ¡¢²»ÐèÒªÊ±ÖÓÏßµÈ»
 **×¢Òâ:ÕâÀïÉæ¼°µ½PDUµÄbuffer»º´æÎÊÌâ£¬Ò»°ãÇé¿öÏÂÉÏ²ãµ½If²ã¶¼²»»áÓÐ PDU¿½±´¹ý³Ì£¬Ö±½Ó°Ñ Buffer »º´æÖ¸Õë½øÐÐ´«µÝ¡£µ½ÁËÇý¶¯²ã¿ÉÄÜ»á¿½±´½øÈëÇý¶¯buffer½øÐÐ·¢ËÍ¡£ÕâÑù¿ÉÒÔÌá¸ß´«ÊäÐ§ÂÊ£¬½ÚÊ¡RAM×ÊÔ´¡£**
 
 **½ÓÊÕÁ÷³Ì**£º
-![20241217191814](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241217191814.png)
 
-1.Çý¶¯Í¨¹ýÂÖÑ¯»òÕßÖÕ¶Ë½ÓÊÕ±¨ÎÄ
-2.Çý¶¯µ÷ÓÃIF²ãµÄRxIndication½«Êý¾Ý´«µÝ¸øInterface²ã
-3.Interface µ÷ÓÃ PduR ²ãµÄ **RxIndication ½«Êý¾Ý´«µÝ¸ø PduR²ã**
-4.PduR²ã¸ù¾ÝPDU IDÕÒµ½Â·ÓÉ±í£¬Â·ÓÉµ½Ö¸¶¨ÉÏ²ã£¬Í¨ÐÅ±¨ÎÄÒ»°ã¶¼Â·ÓÉµ½COM²ã¡£
-5.½øÈëCOM²ãÖ®ºó£¬¸ù¾ÝSWCsµÄÇé¿ö£¬ÒªÃ´Ö±½ÓÍ¨¹ýRTE°ÑÐÅºÅ¸øµ½SWCs£¬ÒªÃ´»º´æµ½×Ô¼ºµÄBuffer¡£
-**×¢Òâ:ÕâÀïÒ²Éæ¼°µ½PDUµÄbuffer»º´æÎÊÌâ£¬Ò»°ãÇé¿ö´ÓÇý¶¯ÉÏÀ´Ò²²»»áÓÐBuffer¿½±´£¬Ö»ÓÐµ½COM²ã²Å»áÓÐ×Ô¼ºµÄBuffer£¬ÕâÑù¿ÉÒÔÌá¸ß´«ÊäÐ§ÂÊ£¬½ÚÊ¡RAM×ÊÔ´¡£**
 ### 4.×Ü½á
-ÕâÒ»ÕÂ°ÑAutosarÍ¨ÐÅ·þÎñµÄ¸ÅÊö½²ÁËÒ»±é£¬´ó¼ÒÒª¶ÔPDU¡¢Êý¾ÝÊÕ·¢Á´Â·ÓÐÒ»¶¨µÄÁË½â£¬Õï¶Ï·þÎñ·Åµ½Õï¶ÏÕÂ½ÚÃèÊö¡£ÕâÀïºÜ¶àÃ»ÓÐÆÌ¿ª½²½â£¬ºóÐø»áÔÚÃ¿Ò»¸ö¾ßÌåÄ£¿éÖÐÏêÏ¸ÃèÊö¡£
+
 ## spiÄ£¿é
 
 ### 1.spi ¸ÅÊö
