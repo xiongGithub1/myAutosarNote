@@ -1,8 +1,8 @@
 <!--
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
- * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-19 19:29:17
+ * @LastEditors: Qxiong&&2307975018@qq.com
+ * @LastEditTime: 2024-12-19 18:53:08
  * @Description: 
 -->
 
@@ -394,70 +394,9 @@ CAN ×ÜÏß×÷Îª³µÔØÍ¨ÐÅ×îÖØÒªµÄ×ÜÏß,ÓëÆäºÜºÃ¿¹¸ÉÈÅÐÔ¡¢´íÎó¼ì²â»úÖÆ¡¢²»ÐèÒªÊ±ÖÓÏßµÈ»
 
 Can Õï¶ÏµÄÍøÂç·Ö²ãÒ²ÊÇ²Î¿¼0SIÄ£ÐÍ£¬¸ÃÄ£ÐÍ¶¨ÒåÁËÍøÂç»¥ÁªµÄ7²ã¼Ü¹¹(ÎïÀí²ã¡¢Êý¾ÝÁ´Â·²ã¡¢ÍøÂç²ã¡¢´«Êä²ã¡¢»á»°²ã¡¢±íÊ¾²ãºÍÓ¦ÓÃ²ã)¡£
 
-Can Õï¶ÏÍ¨ÐÅ°üº¬ÁËÕï¶ÏÓ¦ÓÃ²ã(ISO 15765-3/ISO14229)¡¢ÍøÂç²ã(ISO 15765-2)¡¢Êý¾ÝÁ´Â·²ã(ISO 11898-1)ºÍÎïÀí²ã¡£
-![20241219185642](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219185642.png)
-
-µ±Ç°Ëæ×ÅÍ³Ò»Õï¶Ï(UDS)·þÎñ·¢Õ¹£¬Õï¶ÏÓ¦ÓÃ²ãÒÑ¾­»ù±¾Ê¹ÓÃIS014229±ê×¼¡£ÎÒÃÇ½ñÌìCanTpÄ£¿é¾ÍÊôÓÚÍøÂç´«Êä²ã£¬¾ÍÊÇÊ¹ÓÃISO 15765-2µÄ±ê×¼¡£
-
-**×¢Òâ:ÕâÀï¿ÉÒÔ°Ñ´«Êä²ãºÍÍøÂç²ã·ÅÒ»Æð£¬¶¼ÊÇÓÉ CanTpÄ£¿éÊµÏÖ¡£**
-
-
+Can Õï¶ÏÍ¨ÐÅ°üº¬ÁËÕï¶ÏÓ¦ÓÃ²ã(IS015765-3/IS014229)¡¢ÍøÂç²ã(IS015765-2)¡¢Êý¾ÝÁ´Â·²ã(IS011898-1)ºÍÎïÀí²ã¡£
 #### 2.CanTpÄ£¿é»ù±¾¹¦ÄÜ½éÉÜ
-
-CanTPÊôÓÚCan Í¨ÐÅÐ­ÒéÕ»ÖÐµÄÍøÂç´«Êä²ã£¬Ä¿Ç°»ù±¾Ê¹ÓÃÔÚÕï¶Ï±¨ÎÄÖÐ£¬×îÖÕµÄ Autosar ¹æ·¶ÖÐ£¬CanTpÒ²»áÊÊÅäÍ¨ÐÅ±¨ÎÄ£¬CanTp´¦ÓÚCanIfºÍPduR²ãÖ®¼ä£¬Ö÷ÒªÆðµ½²µÏÂ¼¸¸ö×÷ÓÃ:
-- ·¢ËÍÕï¶Ï±¨ÎÄµÄÊ±ºò£¬°Ñ´óÓÚ8byteµÄÊý¾Ý**·Ö¶Î**·¢³ö
-- ½ÓÊÕÕï¶Ï±¨ÎÄµÄÊ±ºò£¬°Ñ´óÓÚ8byteµÄÊý¾Ý**ÖØ×é**ÆðÀ´
-- ¿ØÖÆÊý¾ÝÁ÷(Á÷¿ØÖ¡)
-- ·Ö¶Î»á»°ÖÐµÄ´íÎó¼ì²â
-- ·¢ËÍÈ¡Ïû
-- ½ÓÊÕÈ¡Ïû
-
-ÏÂÍ¼ÊÇCanTPÔÚCanÍøÂçÐ­ÒéÖÐµÄÎ»ÖÃ:
-
-![20241219190019](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219190019.png)
-
-- Õï¶Ï±¨ÎÄ»áÍ¨¹ý CanTp²ã
-- Í¨ÐÅ±¨ÎÄÔòÖ±½ÓÍ¨¹ý CanIf ¸øµ½PduR²ã
-- 
 #### 3.CanTp×éÖ¡ºÍ²ðÖ¡¹ý³Ì
-
-CAN Õï¶ÏÓÉ·¢ËÍ¶ËµÄÇëÇóÓë½ÓÊÕ¶ËµÄÏìÓ¦¹¹³É£¬Õï¶Ï¼´Îª·¢ËÍ¶ËÓë½ÓÊÕ¶ËÊý¾ÝÍùÀ´¡£ÓÐµÄÕï¶ÏÒ»ÌõÏûÏ¢Íê³É£¬ÓÐµÄÕï¶ÏÐèÒª¶àÌõÏûÏ¢Íê³É£¬±Ï¾¹ÔÚÕï¶ÏÖÐÒ»ÌõCANÏûÏ¢Ö»°üº¬8¸ö×Ö½Ú³¤¶È¡£¶ÔÓÚÒ»ÌõCANÕï¶ÏÏûÏ¢µÄ·Ö¶Î·¢ËÍÎÊÌâ¼´ÎªÍøÂç²ãÐèÒªÌÖÂÛµÄÄÚÈÝ¡£
-
-CanTp²ã´«ÊäµÄ±¨ÎÄ·ÖÎªSF(µ¥Ö¡)¡¢FF(Ê×Ö¡)¡¢CF(Á¬ÐøÖ¡)¡¢FC(Á÷¿ØÖ¡)4Àà¡£
-
-**×¢:¸ÃÎÄÕÂÖ»¿¼ÂÇÕý³£µØÖ·Ä£Ê½**
-
-![20241219190450](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219190450.png)
-
-PCI(Protocol Control Information)Ð­Òé¿ØÖÆÐÅÏ¢£¬°üº¬ÁËPDUµ¥ÔªÀàÐÍºÍÏûÏ¢×Ö½Ú³¤¶È¡£
-![20241219190935](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219190935.png)
-
-**µ¥Ö¡´«Êä**
-Ö»´«ÊäÒ»Ö¡CAN±¨ÎÄ(Ò»Ö¡N-PDU)£¬³ÆÎªSF£¬´«Êä7byte(ÔÚÕý³£µØÖ·Çé¿öÏÂ)Êý¾Ý×Ö½ÚµÄÏûÏ¢£¬²»ÐèÒªNAD£¬byte0×÷ÎªPCIÊ¹ÓÃ¡£
-
-**SF(µ¥Ö¡)**
-ÔÚ·¢ËÍ¶Ëµ½½ÓÊÕ¶ËµÄÇëÇó½öÎªÒ»ÌõÏûÏ¢Ê±£¬¼´Îªµ¥Ö¡(SingleFrame)£¬µ¥Ö¡Êý¾Ý¸ñÊ½ÈçÍ¼£¬µ¥Ö¡µÚÒ»¸ö×Ö½Úbyte0ÎªPCI£¬PCIµÄ¸ß4Î»Îª0£¬PCIµÍËÄÎ»Îª½ÓÏÂÀ´×¼±¸´«ÊäµÄÊý¾Ý³¤¶È£¬´ÓµÚ¶þ¸ö×Ö½Úbyte1ÆðÎª´«ÊäµÄÊý¾Ý(SIDÒ²×÷ÎªÊý¾Ý)¡£´Óµ¥Ö¡µÄÊý¾Ý¸ñÊ½¿ÉÒÔ¿´³ö£¬ÕæÕýµÄÊý¾Ý²¿·Ö×î¶àÎªByte1~Byte7¹²7¸ö×Ö½Ú³¤¶È£¬¼´CANÕï¶ÏÊý¾Ý·¢ËÍ³¤¶ÈµÃÐ¡ÓÚµÈÓÚ7¸ö×Ö½Ú¡£
-
-![20241219192047](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192047.png)
-![20241219192500](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192500.png)
-![20241219192554](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192554.png)
-
-**¶àÖ¡´«Êä**
-
-ÐèÒª´«ÊäµÄÊý¾Ý±È½Ï¶à£¬¾ÍÐèÒª¶àÖ¡À´´«Êä£¬·¢ËÍ¹ý³ÌÖÐÐèÒª°ÑN-SDU·Ö¸î³É¶àÖ¡ N-PDU À´·¢ËÍ¡£½ÓÊÕ¹ý³ÌÖÐ°Ñ¶àÖ¡N-PDU ÖØ×é·¢¸øÉÏ²ã¡£¶àÖ¡´«Êä·ÖÎªÊ×Ö¡ºÍÐøÖ¡¡£
-
-**FF(Ê×Ö¡)**
-ÔÚ¶àÖ¡´«ÊäÖÐ£¬°üÀ¨ÁËÊ×Ö¡(FF)ºÍÁ¬ÐøÖ¡(CF)£¬½ÓÊÕ¶ËÐèÒªÔÚÊÕµ½Ê×ºó»Ø¸´Á÷¿ØÖ¡(FC)¡£CANÕï¶ÏÔÚ´«Êä¶àÖ¡ÏûÏ¢¸ñÊ½ÈçÏÂ:
-![20241219192726](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192726.png)
-
-![20241219192802](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192802.png)
-
-Ê×Ö¡¸ñÊ½ÈçÍ¼ËùÊ¾£¬Ê×Ö¡µÚÒ»¸ö×Ö½ÚPCIµÄ¸ßËÄÎ»Îª1£¬PCIµÍËÄÎ»ÓëµÚ¶þ¸ö×Ö½Ú LEN ºÏÆðÀ´Îª½ÓÏÂÀ´´«ÊäµÄÊý¾Ý³¤¶È£¬´ÓµÚÈý¸ö×Ö½Úbyte2ÆðÎª´«ÊäÊý¾Ý¡£×î´ó¶àÖ¡³¤¶ÈÎª4095¸ö×Ö½Ú¡£
-![20241219192850](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192850.png)
-
-**CF(Á¬ÐøÖ¡)**
-
-Á¬ÐøÖ¡¸ñÊ½ÈçÍ¼ËùÊ¾£¬Á¬ÐøÖ¡µÚÒ»¸ö×Ö½ÚPCIµÄ¸ßËÄÎ»Îª2£¬PCIµÄµÍËÄÎ»ÎªÖ¡¼ÆÊýÆ÷£¬µÚ¶þ¸ö×Ö½Ú byte1ÆðÎªÊ£Óà´«³öµÄÊý¾Ý¡£ÀýÈçÊ×ÒÑ¾­´«ÊäÁËData0£¬Datal...ÖÁ Data5£¬ÔòµÚÒ»¸öÁ¬ÐøÖ¡½Ó×Å´«Êä Data6£¬Data7...ÖÁ
 #### 4.ÍøÂç²ãÊ±¼ä²ÎÊýÒªÇó
 #### 5.Õï¶ÏÊý¾Ý´«ÊäÁ÷³Ì
 

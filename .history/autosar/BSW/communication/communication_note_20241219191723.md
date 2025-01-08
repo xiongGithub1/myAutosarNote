@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-19 19:29:17
+ * @LastEditTime: 2024-12-19 19:17:23
  * @Description: 
 -->
 
@@ -436,28 +436,9 @@ PCI(Protocol Control Information)协议控制信息，包含了PDU单元类型和消息字节长度。
 只传输一帧CAN报文(一帧N-PDU)，称为SF，传输7byte(在正常地址情况下)数据字节的消息，不需要NAD，byte0作为PCI使用。
 
 **SF(单帧)**
-在发送端到接收端的请求仅为一条消息时，即为单帧(SingleFrame)，单帧数据格式如图，单帧第一个字节byte0为PCI，PCI的高4位为0，PCI低四位为接下来准备传输的数据长度，从第二个字节byte1起为传输的数据(SID也作为数据)。从单帧的数据格式可以看出，真正的数据部分最多为Byte1~Byte7共7个字节长度，即CAN诊断数据发送长度得小于等于7个字节。
 
-![20241219192047](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192047.png)
-![20241219192500](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192500.png)
-![20241219192554](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192554.png)
 
-**多帧传输**
 
-需要传输的数据比较多，就需要多帧来传输，发送过程中需要把N-SDU分割成多帧 N-PDU 来发送。接收过程中把多帧N-PDU 重组发给上层。多帧传输分为首帧和续帧。
-
-**FF(首帧)**
-在多帧传输中，包括了首帧(FF)和连续帧(CF)，接收端需要在收到首后回复流控帧(FC)。CAN诊断在传输多帧消息格式如下:
-![20241219192726](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192726.png)
-
-![20241219192802](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192802.png)
-
-首帧格式如图所示，首帧第一个字节PCI的高四位为1，PCI低四位与第二个字节 LEN 合起来为接下来传输的数据长度，从第三个字节byte2起为传输数据。最大多帧长度为4095个字节。
-![20241219192850](https://cdn.jsdelivr.net/gh/xiongGithub1/picGoUpload/image/20241219192850.png)
-
-**CF(连续帧)**
-
-连续帧格式如图所示，连续帧第一个字节PCI的高四位为2，PCI的低四位为帧计数器，第二个字节 byte1起为剩余传出的数据。例如首已经传输了Data0，Datal...至 Data5，则第一个连续帧接着传输 Data6，Data7...至
 #### 4.网络层时间参数要求
 #### 5.诊断数据传输流程
 

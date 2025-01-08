@@ -2,7 +2,7 @@
  * @Author: qinXiong
  * @Date: 2024-11-19 14:20:56
  * @LastEditors: xiong&&2307975018@qq.com
- * @LastEditTime: 2024-12-19 19:29:17
+ * @LastEditTime: 2024-12-19 19:28:10
  * @Description: 
 -->
 
@@ -457,7 +457,7 @@ PCI(Protocol Control Information)协议控制信息，包含了PDU单元类型和消息字节长度。
 
 **CF(连续帧)**
 
-连续帧格式如图所示，连续帧第一个字节PCI的高四位为2，PCI的低四位为帧计数器，第二个字节 byte1起为剩余传出的数据。例如首已经传输了Data0，Datal...至 Data5，则第一个连续帧接着传输 Data6，Data7...至
+
 #### 4.网络层时间参数要求
 #### 5.诊断数据传输流程
 
