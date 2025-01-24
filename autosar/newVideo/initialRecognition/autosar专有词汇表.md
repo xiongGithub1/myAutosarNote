@@ -14,3 +14,4 @@
 5.Actuator:执行器
 6.SWC： Software Components ：软件组件
 7.SBCs:System Basis Chips: 系统基础芯片
+8.XML：可扩展标记语言（Extensible Markup Language），是是一种非常灵活的标记语言，没有固定的标签，所有的标签，在符合XML命名规则的基础上，都可以自定义，但是在写标签名的时候一定要有含义。
